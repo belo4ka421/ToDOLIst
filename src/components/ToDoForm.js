@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./styles/ToDoForm.css";
+import MyButton from "./UI/button/MyButton";
 export default function ToDoForm({ tasks, setTasks }) {
   const [taskText, setTaskText] = useState("");
 
@@ -25,9 +26,7 @@ export default function ToDoForm({ tasks, setTasks }) {
         className="form-input"
       ></input>
       <div>
-        <button onClick={addTask} className="form-btn">
-          Enter
-        </button>
+        <MyButton onClick={addTask}>Enter</MyButton>
       </div>
     </form>
   );
