@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./styles/ToDoForm.css";
 import MyButton from "./UI/button/MyButton";
-export default function ToDoForm({ tasks, setTasks }) {
+export default function ToDoForm({ create }) {
   const [taskText, setTaskText] = useState("");
 
   function addTask(event) {
@@ -13,13 +13,14 @@ export default function ToDoForm({ tasks, setTasks }) {
         id: Date.now(),
         text: taskText,
       };
-      setTasks([...tasks, newTask]);
+      create(newTask);
       setTaskText("");
     }
   }
   return (
     <form className="form-content">
       <input
+        autoFocus
         value={taskText}
         onChange={(event) => setTaskText(event.target.value)}
         placeholder="Enter task"

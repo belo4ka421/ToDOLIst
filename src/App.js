@@ -7,10 +7,19 @@ function App() {
     { id: 1, text: "Привет реакт я люблю тебя" },
     { id: 2, text: "О да как же я люблю тебя" },
   ]);
+
+  function createTask(newTask) {
+    setTasks([...tasks, newTask]);
+  }
+
+  function deleteTask(task) {
+    setTasks(tasks.filter((item) => item.id !== task.id));
+  }
+
   return (
     <div className="App">
-      <ToDoForm tasks={tasks} setTasks={setTasks} />
-      <ToDoList tasks={tasks} />
+      <ToDoForm create={createTask} />
+      <ToDoList deleteTask={deleteTask} tasks={tasks} />
     </div>
   );
 }
