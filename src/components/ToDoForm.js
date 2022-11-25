@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./styles/ToDoForm.css";
 import MyButton from "./UI/button/MyButton";
+import MyInput from "./UI/input/MyInput";
 export default function ToDoForm({ create }) {
   const [taskText, setTaskText] = useState("");
 
@@ -19,13 +20,13 @@ export default function ToDoForm({ create }) {
   }
   return (
     <form className="form-content">
-      <input
+      <MyInput
         autoFocus
         value={taskText}
         onChange={(event) => setTaskText(event.target.value)}
         placeholder="Enter task"
         className="form-input"
-      ></input>
+      ></MyInput>
       <div>
         <MyButton onClick={addTask}>Enter</MyButton>
       </div>
