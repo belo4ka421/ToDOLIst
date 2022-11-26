@@ -6,7 +6,7 @@ export default function ToDoItem({ task, deleteTask }) {
     <div className="wrapper">
       <div className="item-content">
         <div className="item-task">{task.text}</div>
-        <div>
+        <div className="item-btn">
           <MyButton onClick={() => deleteTask(task)} className="item-delete">
             Удалить
           </MyButton>

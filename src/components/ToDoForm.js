@@ -20,15 +20,17 @@ export default function ToDoForm({ create }) {
   }
   return (
     <form className="form-content">
-      <MyInput
-        autoFocus
-        value={taskText}
-        onChange={(event) => setTaskText(event.target.value)}
-        placeholder="Enter task"
-        className="form-input"
-      ></MyInput>
-      <div>
-        <MyButton onClick={addTask}>Enter</MyButton>
+      <div className="content-block">
+        <MyInput
+          autoFocus
+          value={taskText}
+          onChange={(event) => setTaskText(event.target.value)}
+          placeholder="Enter task"
+          className="form-input"
+        ></MyInput>
+        <div className="form-btn">
+          <MyButton onClick={addTask}>Enter</MyButton>
+        </div>
       </div>
     </form>
   );

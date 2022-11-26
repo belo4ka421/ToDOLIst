@@ -17,13 +17,6 @@
   font-size: 18px;
   color: #fff;
 }
-.item-delete {
-  padding: 5px 25px;
-  margin-left: 25px;
-  font-size: 16px;
-  border: 0;
-  background-color: #1f1f1f;
-  color: #fff;
-  border: 1px solid #fff;
-  cursor: pointer;
+.item-btn {
+  margin-left: 20px;
 }
