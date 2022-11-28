@@ -13,9 +13,19 @@
   padding: 15px;
   border-radius: 15px;
 }
+
 .item-task {
+  display: flex;
   font-size: 18px;
   color: #fff;
+  cursor: pointer;
+}
+.item-task-done {
+  display: flex;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: line-through;
 }
 .item-btn {
   margin-left: 20px;

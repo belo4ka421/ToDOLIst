@@ -13,6 +13,7 @@ export default function ToDoForm({ create }) {
       const newTask = {
         id: Date.now(),
         text: taskText,
+        done: true,
       };
       create(newTask);
       setTaskText("");
